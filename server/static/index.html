@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="WebMSNP">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <title>WebMSNP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen">
+        <div class="header">
+            <h1>WebMSNP</h1>
+        </div>
+        <div class="content">
+            <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <div class="form-group">
+                    <label for="server">Server:</label>
+                    <input type="text" id="server" name="server" value="ms.msgrsvcs.ctsrv.gay" required>
+                </div>
+                <div class="form-group">
+                    <label for="port">Port:</label>
+                    <input type="number" id="port" name="port" value="1863" required>
+                </div>
+                <div class="form-group">
+                    <label for="nexusUrl">Nexus URL:</label>
+                    <input type="text" id="nexusUrl" name="nexusUrl" value="https://pp.login.ugnet.gay/rdr/pprdr.asp" required>
+                </div>
+                <div class="form-group">
+                    <label for="configServer">Config Server:</label>
+                    <input type="text" id="configServer" name="configServer" value="https://conf.msgrsvcs.ctsrv.gay/Config/MsgrConfig.asmx">
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="loginBtn" class="btn-primary">Sign In</button>
+                </div>
+                <div id="loginError" class="error-message" style="display:none;"></div>
+                <div id="loginStatus" class="status-message" style="display:none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div id="mainScreen" class="screen" style="display:none;">
+        <div class="header">
+            <div class="header-controls-left">
+                <select id="statusSelect" class="status-select">
+                    <option value="Online">Online</option>
+                    <option value="Busy">Busy</option>
+                    <option value="Away">Away</option>
+                    <option value="BeRightBack">Be Right Back</option>
+                    <option value="OnThePhone">On The Phone</option>
+                    <option value="OutToLunch">Out To Lunch</option>
+                    <option value="Idle">Idle</option>
+                    <option value="Invisible">Invisible</option>
+                </select>
+            </div>
+            <h1>Contacts</h1>
+            <div class="header-controls">
+                <button id="logoutBtn" class="btn-secondary">Sign Out</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="collapsible-sections">
+                <div class="collapsible-section">
+                    <button class="collapsible-toggle" id="togglePsm">Personal Message ▼</button>
+                    <div class="collapsible-content" id="psmSection" style="display:none;">
+                        <input type="text" id="personalMessageInput" placeholder="Set personal message..." maxlength="129">
+                        <button id="setPsmBtn" class="btn-small">Set</button>
+                    </div>
+                </div>
+                <div class="collapsible-section">
+                    <button class="collapsible-toggle" id="toggleAddContact">Add Contact ▼</button>
+                    <div class="collapsible-content" id="addContactSection" style="display:none;">
+                        <input type="email" id="addContactInput" placeholder="Add contact email...">
+                        <button id="addContactBtn" class="btn-small">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div id="contactList" class="contact-list"></div>
+        </div>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chatScreen" class="screen" style="display:none;">
+        <div class="header">
+            <div class="header-controls-left">
+                <button id="nudgeBtn" class="btn-small">Nudge</button>
+            </div>
+            <h1 id="chatTitle">Chat</h1>
+            <div class="header-controls">
+                <button id="closeChatBtn" class="btn-secondary">Close</button>
+            </div>
+        </div>
+        <div class="content chat-layout">
+            <div id="messageContainer" class="message-container"></div>
+            <div class="message-input-container">
+                <input type="text" id="messageInput" placeholder="Type a message and press Done/Enter..." maxlength="512">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
