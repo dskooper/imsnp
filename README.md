@@ -35,4 +35,7 @@ Once compiled, you can launch the server executable to immediately start hosting
 
 Make sure that port 27677 is not being blocked by your firewall or being used by another process.
 
+## License
+<img width="136" height="68" alt="gplv3-with-text-136x68" src="https://github.com/user-attachments/assets/9f55f108-02c2-46db-bf0f-84949be260ae" />
 
+This project is open-source and provided under the GNU GPL v3 license: you can view the license contents [here](https://www.gnu.org/licenses/gpl-3.0.txt)
