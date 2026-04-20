@@ -1242,8 +1242,8 @@ optgroup {
   border-radius: 9px;
   background: #fff;
   padding: 10px;
-  min-height: -webkit-calc(100vh - 72px);
-  min-height: calc(100vh - 72px);
+  max-height: -webkit-calc(100vh - 66px);
+  max-height: calc(100vh - 66px);
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
