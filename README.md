@@ -1,25 +1,25 @@
-<img width="128" alt="image" src="https://github.com/user-attachments/assets/ce40195c-753c-41da-b861-96ee03385b2c" /> <br>
+<img width="192" alt="PolyMSNP logo" src="https://raw.githubusercontent.com/dskooper/PolyMSNP/refs/heads/main/logo.png" /> <br>
 
-iMSNP is a lightweight web-based client for the MSNP instant messaging protocol!
+PolyMSNP is a lightweight web-based client for the MSNP instant messaging protocol!
 
 This repository contains the Rust-based source code for the server.
 
 ## Servers
 > [!NOTE]
-> If you are hosting your own instance of iMSNP, please let me know!
+> If you are hosting your own instance of PolyMSNP, please let me know!
 
 As of right now, there is **1** website hosting this server:
-- https://imsnp.kooper.online (not 24/7, only for testing)
+- https://pmsnp.kooper.online (not 24/7, only for testing)
 
-Even so, it is highly recommended to host iMSNP yourself!
+Even so, it is highly recommended to host PolyMSNP yourself!
 
 ## Compatibility
 This client is designed to work flawlessly on iOS 6's Safari/WebKit, with iOS 5 support coming soon...
 
-Any browser from then on should run iMSNP fine.
+Any browser from then on should run PolyMSNP fine.
 
 ### Unsupported browsers
-iMSNP was designed for legacy WebKit in mind, and therefore some browsers may not cooperate:
+PolyMSNP was designed for legacy WebKit in mind, and therefore some browsers may not cooperate:
 - Opera Mini (untested)
 - Internet Explorer (untested)
 
@@ -35,7 +35,7 @@ Issues will be closed as "wontfix" as its out of scope (this project was never m
 ## Todo
 - [ ] Sending images (this is gonna be a pain to implement but hopefully it'll be worth it)
 - [ ] Proper versioning system **that's implemented into the program**
-  - [ ] Have iMSNP display a build version and complain if its not the latest
+  - [ ] Have PolyMSNP display a build version and complain if its not the latest
 - [ ] View profile pictures
 - [ ] Dark mode
 
@@ -43,7 +43,7 @@ Issues will be closed as "wontfix" as its out of scope (this project was never m
 - Winks:
   - Requires Adobe Flash which was never available on iOS[^2] and dropped from Android after Ice Cream Sandwich. <br>
 - File transfers:
-  - Personally out of scope, iMSNP is not supposed to be a feature-complete client (and also idk how to implement). <br>
+  - Personally out of scope, PolyMSNP is not supposed to be a feature-complete client (and also idk how to implement). <br>
     If you want to transfer files use something like [Litterbox](https://litterbox.catbox.moe)
 - Voice/video calling:
   - Very out of scope considering it probably wouldn't work on mobile devices (assuming I knew how to implement that in the first place)
@@ -56,12 +56,12 @@ Issues will be closed as "wontfix" as its out of scope (this project was never m
 Once installed, you can do the following:
 - Linux:
   ```
-  git clone https://github.com/dskooper/imsnp
-  cd imsnp
+  git clone https://github.com/dskooper/PolyMSNP
+  cd polymsnp
   ./build-release.sh
   ```
 - Windows:
-  1. Download the entire repository by clicking on [this link](https://github.com/dskooper/imsnp/archive/refs/heads/main.zip)
+  1. Download the entire repository by clicking on [this link](https://github.com/dskooper/PolyMSNP/archive/refs/heads/main.zip)
   2. Extract the repository into a folder and enter it.
   3. Right click on `build-release.ps1` and press on "Run with PowerShell`
 
@@ -72,8 +72,8 @@ Once compiled, you can launch the server executable to immediately start hosting
 
 ### Adding new emoticon packs
 
-To create a new emoticon pack for iMSNP, do the following:
-1. Inside your iMSNP executable's folder, navigate to `static/emoticons`
+To create a new emoticon pack for PolyMSNP, do the following:
+1. Inside your PolyMSNP executable's folder, navigate to `static/emoticons`
 2. Inside `packs.json`, insert a new entry:
    ```
    [
@@ -108,6 +108,6 @@ To create a new emoticon pack for iMSNP, do the following:
 
 This project is open-source and provided under the GNU GPL v3 license: you can view the license contents [here](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-[^1]: For legal reasons, iMSNP does not provide the ability to use the official MSN Messenger emoticons by default.
+[^1]: For legal reasons, PolyMSNP does not provide the ability to use the official MSN Messenger emoticons by default.
 [^2]: Outside of apps such as Puffin Browser, which are no longer in development.
 [^3]: Make sure that this port is not blocked by your firewall or in use by another process.
