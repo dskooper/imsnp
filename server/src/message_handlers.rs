@@ -73,7 +73,7 @@ async fn handle_login(
             info!("[LOGIN] Attempting login with SDK for email: {}", email);
 
             let result = client
-                .login(email.clone(), &password, &nexus_url, "webmsnp", "7.0")
+                .login(email.clone(), &password, &nexus_url, "polyMSNP", "7.0")
                 .await;
 
             info!(
