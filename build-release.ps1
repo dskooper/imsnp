@@ -1,4 +1,4 @@
-Write-Host "Building iMSNP Server..." -ForegroundColor Cyan
+Write-Host "Building PolyMSNP Server..." -ForegroundColor Cyan
 
 # Clean previous build
 if (Test-Path "build-rel") {
@@ -17,7 +17,7 @@ if ($LASTEXITCODE -ne 0) {
 # Create distribution directory
 Write-Host "`nCreating release package..." -ForegroundColor Yellow
 New-Item -ItemType Directory -Path "build-rel" | Out-Null
-Copy-Item "server/target/release/imsnp.exe" "build-rel/imsnp.exe"
+Copy-Item "server/target/release/pmsnp-server.exe" "build-rel/pmsnp-server.exe"
 Copy-Item -Recurse "server/static" "build-rel/static"
 
 Write-Host "Build Complete!" -ForegroundColor Green
